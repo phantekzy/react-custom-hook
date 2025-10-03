@@ -1,16 +1,33 @@
-# React + Vite
+# React Custom Hook – useFetch
+This project demonstrates how to create and use a reusable custom React hook (`useFetch`) for handling API requests in a clean and organized way. The hook abstracts common fetch logic and provides loading, error, and data states, while the UI uses Bootstrap 5 components for a polished look.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Reusable `useFetch` hook for API requests
+- Automatic handling of loading, success, and error states
+- Built-in delay simulation to test loading spinners
+- Bootstrap 5 integration (spinner, alerts, list styles)
+- Clean and maintainable project structure
 
-Currently, two official plugins are available:
+## Tech Stack
+- React (Functional Components + Hooks)
+- Bootstrap 5
+- Custom Hooks (useFetch)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+src/
+ ├── hooks/
+ │    └── useFetch.js   # Custom hook for data fetching
+ ├── App.jsx            # Main app demonstrating the hook
+ └── index.js           # React entry point
 
-## React Compiler
+## Installation
+1. Clone the repository: git clone https://github.com/phantekzy/react-custom-hook.git
+2. Navigate into the project folder: cd react-custom-hook
+3. Install dependencies: npm install
+4. Start the development server: npm run dev
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Usage
+Import and use the `useFetch` hook by passing a URL and optional fetch options. It returns an object with `{ loading, data, errors }`:
+const { loading, data, errors } = useFetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
