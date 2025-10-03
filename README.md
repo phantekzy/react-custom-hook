@@ -13,13 +13,6 @@ This project demonstrates how to create and use a reusable custom React hook (`u
 - Bootstrap 5
 - Custom Hooks (useFetch)
 
-## Project Structure
-src/
- ├── hooks/
- │    └── useFetch.js   # Custom hook for data fetching
- ├── App.jsx            # Main app demonstrating the hook
- └── index.js           # React entry point
-
 ## Installation
 1. Clone the repository: git clone https://github.com/phantekzy/react-custom-hook.git
 2. Navigate into the project folder: cd react-custom-hook
